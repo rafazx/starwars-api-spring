@@ -5,8 +5,6 @@ import java.util.List;
 import com.starwarsapi.starwarsapirest.model.Planeta;
 import com.starwarsapi.starwarsapirest.repository.PlanetaRepository;
 import com.starwarsapi.starwarsapirest.services.PlanetaService;
-import com.starwarsapi.starwarsapirest.services.RestService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -15,7 +13,6 @@ import org.springframework.web.server.ResponseStatusException;
 @Service
 public class PlanetaServiceImpl implements PlanetaService {
 
-    private String uri = "http://swapi.dev/api/planets/?page=";
 
     @Autowired
     private PlanetaRepository planetaRepository;

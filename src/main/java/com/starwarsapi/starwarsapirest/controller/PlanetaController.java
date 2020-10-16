@@ -43,8 +43,7 @@ public class PlanetaController {
 
     @PostMapping
     public ResponseEntity<Planeta> criarPlaneta(@RequestBody Planeta entity) {
-        String uri = "https://swapi.dev/api/planets/?page=";
-        entity.setQtdFilmes(this.restService.pegarTotalFilmes(entity.getNome(), uri));
+        entity.setQtdFilmes(this.restService.pegarTotalFilmes(entity.getNome()));
         return ResponseEntity.ok(this.planetaService.criarPlaneta(entity));
     }
     
